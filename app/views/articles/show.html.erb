@@ -1,4 +1,5 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
 <%= link_to "<< 回到文章列表", articles_path %>
+<%= link_to "編輯文章", edit_article_path(@article) %>
 <%= link_to "刪除文章", article_path(@article), method: :delete, data: {confirm: "確定刪除這篇文章？"} %>
