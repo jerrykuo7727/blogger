@@ -7,7 +7,9 @@ class Article < ActiveRecord::Base
     validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
     def tag_list
-        tags.join(", ")
+        self.tags.collect do |tag|
+            tag.name
+        end.join(", ")
     end
 
     def tag_list=(tags_string)
