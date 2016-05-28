@@ -1,7 +1,7 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p><br />
-<h3>留言</h3>
-<%= render partial: 'articles/comment', collection: @article.comments %>
+<h3>留言 (<%= @article.comments.size %>)</h3>
+<%= render partial: 'articles/comment', collection: @article.comments %><br />
 <%= render partial: 'comments/form' %>
 <%= link_to "<< 回到文章列表", articles_path %>
 <%= link_to "編輯文章", edit_article_path(@article) %>
