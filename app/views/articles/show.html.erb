@@ -1,7 +1,7 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p><br />
 <% if @article.image.exists? %>
-  <p><%= image_tag @article.image.url %></p><br />
+  <p><%= image_tag @article.image.url(:medium) %></p><br />
 <% end %>
 <p>
   標籤︰

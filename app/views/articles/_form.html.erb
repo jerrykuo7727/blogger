@@ -19,7 +19,7 @@
   <p>
     <%= f.label "附圖" %><br />
     <% if @article.image.exists? %>
-      <%= image_tag @article.image.url %><br />
+      <%= image_tag @article.image.url(:thumb) %><br />
     <% end %>
     <%= f.file_field :image %>
   </p>
