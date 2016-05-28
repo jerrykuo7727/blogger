@@ -1,4 +1,4 @@
-<h1>Create a New Article</h1>
+<h1>建立新文章</h1>
 <%= form_for(@article) do |f| %>
   <ul>
   <% @article.errors.full_messages.each do |error| %>
@@ -6,14 +6,14 @@
   <% end %>
   </ul>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label "標題" %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :body %><br />
+    <%= f.label "內文" %><br />
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit "送出" %>
   </p>
 <% end %>
