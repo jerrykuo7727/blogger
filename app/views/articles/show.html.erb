@@ -1,5 +1,6 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p><br />
+<p><%= image_tag @article.image.url %></p><br />
 <p>
   標籤︰
     <% @article.tags.each do |tag| %>
