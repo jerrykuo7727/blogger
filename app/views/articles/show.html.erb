@@ -1,5 +1,11 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p><br />
+<p>
+  標籤:
+    <% @article.tags.each do |tag| %>
+	  <%= link_to tag.name, tag_path(tag) %>
+	<% end %>
+</p><br />
 <h3>留言 (<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %><br />
 <%= render partial: 'comments/form' %>
