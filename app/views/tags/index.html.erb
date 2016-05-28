@@ -1,0 +1,9 @@
+<h1>標籤</h1>
+<ul>
+  <% @tags.each do |tag| %>
+    <% if tag.articles.size > 0 %>
+  	  <li><%= link_to tag.name, tag_path(tag) %></li><br />
+  	<% end %>
+  <% end %>
+</ul>
+<%= link_to "<< 回到文章列表", articles_path %>

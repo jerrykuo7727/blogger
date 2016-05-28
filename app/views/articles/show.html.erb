@@ -1,7 +1,7 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p><br />
 <p>
-  標籤:
+  標籤︰
     <% @article.tags.each do |tag| %>
 	  <%= link_to tag.name, tag_path(tag) %>
 	<% end %>

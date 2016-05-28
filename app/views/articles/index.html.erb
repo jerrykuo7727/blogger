@@ -1,11 +1,12 @@
 <h1>文章總覽</h1>
-<ul id="articles"">
+<ul id="articles">
   <% @articles.each do |article| %>
     <li>
   	  <%= link_to article.title, article_path(article),
   	      class: 'article_title', id: "article_#{article.id}" %>
   	</li>
-  <% end %>
+  <% end %><br />
+  <li><%= link_to "#標籤", tags_path%></li>
 </ul>
 
 <%= link_to "建立新文章", new_article_path, class: "new_article" %>
